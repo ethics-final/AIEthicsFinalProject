@@ -20,7 +20,7 @@ def run_data_engineering(df):
     
     df['grade_group'] = 'low'
     df['grade_group_binary'] = 0
-    df.loc[df['G3'] > 13, 'grade_group'] = 'high'
-    df.loc[df['G3'] > 13, 'grade_group_binary'] = 1
+    df.loc[df['G3'] >= 13, 'grade_group'] = 'high'
+    df.loc[df['G3'] >= 13, 'grade_group_binary'] = 1
     
     return df
